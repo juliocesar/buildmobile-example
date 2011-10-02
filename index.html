@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="red" />    
+    <title>Right Near Me</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700">
+    <link rel="stylesheet" href="/css/all.css" media="all">
+  </head>
+  <body>
+    <section id="not-found">
+      <h1>Whoops!</h1>
+      <p>The page you're looking for cannot be found. Sorry!</p>
+    </section>
+    <section id="home">
+      <h1 id="logo">Right Near Me</h1>
+      <div id="start-here" class="tooltip important">
+        <span class="icon">!</span>
+        <p>
+          Preferences not set! Head there first.
+          <a data-href="/settings" class="button">Go to settings</a>
+        </p>
+      </div>
+      <menu>
+        <li>
+          <a data-href="/settings">Settings</a>
+        </li>
+        <li>
+          <a data-href="/yourown">Get your own</a>
+        </li>
+      </menu>
+      <ul id="now-showing">
+        <li>
+          <a data-href="/shops/1">Bob's Cafe</a>
+        </li>
+        <li>
+          <a data-href="/shops/2">Joe Surfboards</a>
+        </li>
+        <li>
+          <a data-href="/shops/3">Natura Health Supplements</a>
+        </li>
+        <li>
+          <a data-href="/shops/4">Buckshot Guns &amp; Ammo</a>
+        </li>
+        <li>
+          <a data-href="/shops/5">Walter Blue Ice</a>
+        </li>
+        <li>
+          <a data-href="/shops/6">Jesse's Blue Ice</a>
+        </li>
+      </ul>
+    </section>
+    <section id="settings">
+      <header>
+        <button data-href="/" class="back"></button>
+        <h1>Settings</h1>
+      </header>
+      <form action="#">
+        <label for="keywords">Keywords</label>
+        <input type="text" name="keywords" id="keywords" placeholder="E.g.: surf coffee music" autocapitalize="off">
+      </form>
+      <p>
+        Keywords will narrow down the list of stores near you based on relevance/association with
+        the keywords you specify.
+      </p>
+      <p> 
+        Think of this as a search criteria that sticks around.
+      </p>
+    </section>
+    <section id="yourown">
+      <header>
+        <button data-href="/" class="back"></button>
+        <h1>Get your own</h1>
+      </header>      
+      <h2>Want your own store?</h2>
+      <p>
+        Right Near Me makes it easy for you to create your online
+        mobile-friendly presence.
+      </p>
+      <p>
+        That is, the day it comes out, of course.
+      </p>
+    </section>
+    <section id="shop-1" class="coffee">
+      <header>
+        <button data-href="/" class="back"></button>
+        <h1>Bob's Cafe</h1>
+      </header>
+      <h1>♨ Welcome to Bob's Cafe</h1>
+      <p>Cheap coffee and snacks!</p>
+      <p>We're located in Sydney, Australia, at the CBD area, known for it's shitty coffee.</p>
+    </section>
+    <script src="/js/jquery-1.6.4.min.js"></script>    
+    <script src="/js/underscore.js"></script>
+    <script src="/js/backbone.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

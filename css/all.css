@@ -1,0 +1,160 @@
+* { margin: 0; padding: 0; outline: 0; border: 0; -webkit-box-sizing: border-box } /* we'll add outlines on a case by case basis */
+ul { list-style-type: none }
+
+a.button {
+  -webkit-box-shadow: 1px 1px 0px #000;
+  -webkit-border-radius: 0.5em;
+  font-style: italic;
+  font-weight: 600;
+  text-shadow: 1px 1px 0px #757575;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F5D201), to(#f5a101));
+  color: #fff;
+  display: inline-block;
+  padding: 0.15em 0.25em;
+  text-decoration: none;
+}
+
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #FFF;
+  font: 400 1em 'PT Sans Narrow';
+  overflow-x: hidden;
+  background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#a51703), to(#BC4F40)), #a51703;
+  -webkit-perspective: 800;
+  -webkit-text-size-adjust: none;
+  -webkit-transform-style: preserve-3d;
+  -webkit-user-select: none;
+}
+
+body > section {
+  display: block;
+  position: absolute;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#a51703), to(#BC4F40)), #a51703;
+  -webkit-transition: all 0.25s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(100%,0%,0%);
+}
+body > section.current { -webkit-transform: translate3d(0%,0%, 0%); opacity: 1; pointer-events: auto }
+body > section > *      { margin: auto 10px }
+body > section > header { position: relative; height: 45px; margin: 0 0 10px; padding: 0 10px; background: rgba(0,0,0,.8); text-align: center; overflow: hidden }
+body > section > header h1 { font: 700 22px/47px 'PT Sans Narrow'; color: #fff }
+
+button.back { position: absolute; top: 13px; width: 26px; height: 20px; background: url(/img/back.png) left center no-repeat }
+
+section > p { margin-bottom: 5px; font-size: 18px }
+
+#logo { margin-bottom: 10px }
+
+#home menu {
+  -webkit-box-align: stretch;
+  -webkit-box-orient: horizontal;  
+  display: -webkit-box;
+  margin-top: 10px
+}
+#home menu li { -webkit-box-flex: 1; list-style-type: none; text-align: center }
+#home menu a  { 
+  display: block; 
+  padding: 10px;   
+  font-weight: bold; 
+  color: #fff; 
+  text-decoration: none; 
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6D1003), to(#490b02)); 
+  border-right: 1px solid #530c02 
+}
+#home menu li:first-child a { border-radius: 0; border-top-left-radius: 8px; border-bottom-left-radius: 8px }
+#home menu li:last-child a  { border-radius: 0; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-right: 0 }
+
+div.tooltip {
+  position: relative;
+  display: none;
+  padding: 10px;
+  font-size: 16px;
+  background: #6D1003;
+  border-radius: 8px;
+}
+div.tooltip .icon {
+  position: absolute;
+  left: 30px; top: 50%;
+  display: block;
+  width: 35px;
+  margin: -0.6em;
+  font: bold 2em inherit;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 0px #000;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F5D201), to(#f5a101));  
+  border-radius: 1em;
+}
+
+div.tooltip.important .icon {
+  -webkit-animation: throbs 0.5s infinite ease-in-out;
+}
+
+div.tooltip p { margin-left: 50px }
+
+#now-showing {
+  margin-top: 15px;
+  border: 1px solid #B4B4B4;
+  background: #fff;
+  color: #000;
+  font: bold 22px Helvetica;
+/*  font: normal normal bold 17px/normal Helvetica;*/
+  border-radius: 8px
+}
+
+#now-showing li {
+  color: #000;
+  font-size: 14px;
+  border-top: 1px solid #B4B4B4;
+  padding: 10px;
+}
+
+#now-showing li a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+#now-showing li:first-child {
+  border-top: 0px;
+  border-top-left-radius: 8px 8px;
+  border-top-right-radius: 8px 8px;
+}
+
+#settings form        { margin-bottom: 10px }
+#settings form label,
+#settings form input  { font-size: 20px }
+#settings form input  { font-family: inherit }
+#settings form label  { margin-right: 16px }
+
+/* forms */
+label { font-weight: 700 }
+input { border: 0; padding: 0.25em; border-radius: 0 }
+
+@-webkit-keyframes throbs {
+  0%    { -webkit-transform: scale(1) }
+  50%   { -webkit-transform: scale(1.1) }
+  100%  { -webkit-transform: scale(1) }
+}
+
+/* Themes */
+body > section.coffee {
+  background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#a54e03), to(#bc7940)), #a54e03;
+}
+body > section.coffee h1,
+body > section.coffee p   { text-shadow: 1px 1px 0 #000 }
+
+@media all and (orientation: portrait) {
+  body, body > section { min-height: 420px }
+}
+
+@media all and (orientation: landscape) {
+  body, body > section { min-height: 350px }
+}
