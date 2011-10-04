@@ -8,7 +8,7 @@ Throwing a framework at your app, such as jQuery Mobile, Sencha, or anything tha
 
 We'll look at how to do this, taking a minimalist approach using HTML5, CSS3 and [Backbone.js](http://documentcloud.github.com/backbone/). Minimalism is now trendy (your mileage may vary) for desktop web apps, but on mobile, the benefits are huge, and more importantly, noticeable.
 
-Point your iPhone/Android to [http://awesomebydesign.com/bm-example](http://awesomebydesign.com/bm-example) and have a play around. This example is taken from an app I've been working on, *very* slowly, for a while now. The implementation is, in turn, based on an example that comes with [Zepto.js](https://github.com/madrobby/zepto/tree/master/examples/iphone).
+Point your iPhone/Android to [http://bm-example.heroku.com](http://bm-example.heroku.com) and have a play around. This example is taken from an app I've been working on, *very* slowly, for a while now. The implementation is, in turn, based on an example that comes with [Zepto.js](https://github.com/madrobby/zepto/tree/master/examples/iphone).
 
 ## First things first
 
@@ -158,7 +158,7 @@ It'd be interesting to allow shop owners to customise the look of their mobile s
     body > section.coffee h1,
     body > section.coffee p   { text-shadow: 1px 1px 0 #000 }
 
-The “coffee” theme is merely a variant of the original red theme, with a coffee-like colour. As a bonus I've added drop shadows to the text to improve the readability, since the light brown colour offers a lot less contrast than the original dark red, when considering the white text.
+The “coffee” theme is merely a variant of the original red theme, with a coffee-like colour. As a bonus I've added drop shadows to the text to improve the readability, since the light brown colour offers a lot less contrast than the original dark red, when considering the white text. The remaining example themes are all variants of this one.
 
 So let’s say the store owner, when setting up her store, picked the “coffee" theme. In the example, we have a few hardcoded links in the HTML, and one working store with little content in it. If we were loading these from a server via Ajax, we'd load the store's preferences, detect the theme choice, and apply the corresponding CSS class to the `<section>` element.
   

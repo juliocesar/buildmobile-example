@@ -46,7 +46,7 @@ body > section > *      { margin: auto 10px }
 body > section > header { position: relative; height: 45px; margin: 0 0 10px; padding: 0 10px; background: rgba(0,0,0,.8); text-align: center; overflow: hidden }
 body > section > header h1 { font: 700 22px/47px 'PT Sans Narrow'; color: #fff }
 
-button.back { position: absolute; top: 13px; width: 26px; height: 20px; background: url(/img/back.png) left center no-repeat }
+button[role="back"] { position: absolute; top: 13px; width: 26px; height: 20px; background: url(/img/back.png) left center no-repeat }
 
 section > p { margin-bottom: 5px; font-size: 18px }
 
@@ -150,6 +150,21 @@ body > section.coffee {
 }
 body > section.coffee h1,
 body > section.coffee p   { text-shadow: 1px 1px 0 #000 }
+body > section.black {
+  background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#232323), to(#373737)), #232323;
+}
+body > section.nature {
+  background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#42ba3c), to(#63cb5e)), #42ba3c;
+}
+body > section.nature h1,
+body > section.nature p   { text-shadow: 1px 1px 0 #000 }
+body > section.ice {
+  background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#5e8dca), to(#5f90ce)), #5e8dca;
+}
+body > section.ice h1,
+body > section.ice p   { text-shadow: 1px 1px 0 #000 }
+
+
 
 @media all and (orientation: portrait) {
   body, body > section { min-height: 420px }

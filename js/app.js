@@ -29,14 +29,17 @@
   var HomeView = Backbone.View.extend({
     el : $('#home'),
     initialize : function() {
-      App.Settings.bind('change', this.hideMenu, this);
+      App.Settings.bind('change', this.showHideMenu, this);
       App.Settings.trigger('change');
     },
     
-    hideMenu : function() {
+    showHideMenu : function() {
       if (!App.Settings.has('keywords') || App.Settings.get('keywords') === '') {
         this.el.find('menu').hide();
         this.el.find('#start-here').show();
+      } else {
+        this.el.find('#start-here').hide();        
+        this.el.find('menu').show();
       }
     }
   });
