@@ -2,6 +2,7 @@
   App = {
     placeAnchorHooks : function() {
       $('[data-href]').live('touchstart',function() {
+        
         App.Router.navigate( $(this).attr('data-href'), true );
         _.delay(function() { window.scrollTo(0,0); }, 250);
       });
@@ -65,11 +66,8 @@
   var Router = Backbone.Router.extend({
     routes : {
       ''            : 'home',
-      '/'           : 'home',
       'shops/:id'   : 'show',
-      '/shops/:id'  : 'show',      
-      ':id'         : 'page',
-      '/:id'        : 'page'
+      ':id'         : 'page'
     },
 
     hideAll : function() {

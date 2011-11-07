@@ -39,9 +39,9 @@ body > section {
   background: -webkit-gradient(radial, 50% center, 200, 50% center, 40, from(#a51703), to(#BC4F40)), #a51703;
   -webkit-transition: all 0.25s ease-in-out;
   -webkit-transform-style: preserve-3d;
-  -webkit-transform: translate3d(100%,0%,0%);
+  -webkit-transform: translate3d(100%,0%,0);
 }
-body > section.current { -webkit-transform: translate3d(0%,0%, 0%); opacity: 1; pointer-events: auto }
+body > section.current { -webkit-transform: translate3d(0%,0%, 0); opacity: 1; pointer-events: auto }
 body > section > *      { margin: auto 10px }
 body > section > header { position: relative; height: 45px; margin: 0 0 10px; padding: 0 10px; background: rgba(0,0,0,.8); text-align: center; overflow: hidden }
 body > section > header h1 { font: 700 22px/47px 'PT Sans Narrow'; color: #fff }
